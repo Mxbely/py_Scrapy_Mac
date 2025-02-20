@@ -3,6 +3,7 @@ from multiprocessing import Process
 import subprocess
 from api_server.main import app
 from api_server.utils import FILE_PATH
+from macdonalds.macdonalds.spiders.mac import logger
 
 
 def run_spider():
@@ -17,10 +18,10 @@ def run_server():
 
 
 if __name__ == "__main__":
-    print("Запуск Scrapy...")
+    logger.info("Start scraping...")
     spider_process = Process(target=run_spider)
     spider_process.start()
     spider_process.join()
 
-    print("Запуск FastAPI сервера...")
+    logger.info("Starting FastAPI server...")
     run_server()
