@@ -26,7 +26,7 @@ class MacSpider(scrapy.Spider):
         dish_details = response.json()["item"]
         nutrients = dish_details["nutrient_facts"]["nutrient"]
         item_name = dish_details["item_name"]
-        
+
         if "®" in item_name:
             item_name = item_name.replace("®", "")
 
