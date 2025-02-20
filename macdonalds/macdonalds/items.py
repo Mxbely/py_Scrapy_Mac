@@ -7,6 +7,13 @@ import scrapy
 
 
 class MacdonaldsItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    description = scrapy.Field()
+    calories = scrapy.Field()
+    fats = scrapy.Field()
+    carbs = scrapy.Field()
+    proteins = scrapy.Field()
+    unsaturated_fats = scrapy.Field()
+    sugar = scrapy.Field()
+    salt = scrapy.Field()
+    portion = scrapy.Field()
